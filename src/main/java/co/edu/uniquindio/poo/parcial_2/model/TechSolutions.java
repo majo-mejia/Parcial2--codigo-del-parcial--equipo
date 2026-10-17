@@ -3,7 +3,7 @@ package co.edu.uniquindio.poo.parcial_2.model;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Fachada: guarda las listas en memoria y delega el trabajo. No calcula ni valida reglas de negocio. */
+
 public class TechSolutions {
     private String nombre;
     private String nit;
@@ -66,7 +66,7 @@ public class TechSolutions {
         }
     }
 
-    // ---------- Servicios ----------
+    // servicios
     public List<Servicio> listarServicios() {
         return catalogo.listar();
     }
@@ -106,7 +106,7 @@ public class TechSolutions {
         return personalizados;
     }
 
-    // ---------- Paquetes ----------
+    // paquetes
     public Paquete crearPaquete(String nombrePaquete, String descripcion) {
         if (nombrePaquete == null || nombrePaquete.trim().isEmpty()) {
             throw new IllegalArgumentException("El paquete necesita un nombre");
@@ -147,7 +147,7 @@ public class TechSolutions {
         return paquetes;
     }
 
-    // ---------- Clientes ----------
+    // clientes
     public List<Cliente> listarClientes() {
         return clientes;
     }
@@ -161,7 +161,7 @@ public class TechSolutions {
         return null;
     }
 
-    // ---------- Solicitudes ----------
+    // solicitudes
     public String generarCodigoSolicitud() {
         contadorSolicitudes++;
         return "SOL-" + String.format("%04d", contadorSolicitudes);
@@ -195,13 +195,13 @@ public class TechSolutions {
         if (solicitud == null) {
             throw new IllegalArgumentException("La solicitud no existe");
         }
-        // Si no hay tecnico, calcularCosto lanza excepcion y NO se confirma
+        // Si no hay tecnico, calcularCosto lanza excepcion y no se confirma
         double total = solicitud.calcularCosto(proveedor);
         solicitud.setCostoTotal(total);
         solicitud.confirmar();
     }
 
-    // ---------- Tecnicos y costo ----------
+    // tecnicos y costo
     public InformacionTecnico consultarTecnico(String especialidad) {
         return proveedor.consultarTecnico(especialidad);
     }

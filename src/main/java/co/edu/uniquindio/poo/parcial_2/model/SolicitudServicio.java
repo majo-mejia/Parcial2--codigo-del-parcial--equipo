@@ -31,7 +31,7 @@ public class SolicitudServicio {
         this.costoTotal = calcularCostoItems();
     }
 
-    /** Suma los items (servicios, paquetes y extras) sin incluir desplazamientos. */
+    /** suma los items (servicios, paquetes y extras) sin incluir desplazamientos. */
     public double calcularCostoItems() {
         double total = 0;
         for (ItemContratable item : items) {
@@ -40,7 +40,7 @@ public class SolicitudServicio {
         return total;
     }
 
-    /** Lista las especialidades presenciales sin repetir, para cobrar un solo desplazamiento por cada una. */
+    /** lista las especialidades presenciales sin repetir, para cobrar un solo desplazamiento por cada una. */
     public List<String> obtenerEspecialidadesPresenciales() {
         List<String> especialidades = new ArrayList<>();
         for (ItemContratable item : items) {
@@ -57,7 +57,7 @@ public class SolicitudServicio {
         return !obtenerEspecialidadesPresenciales().isEmpty();
     }
 
-    /** Costo total = items + un desplazamiento por especialidad. Lanza excepcion si no hay tecnico. */
+    /** costo total = items + un desplazamiento por especialidad. Lanza excepcion si no hay tecnico. */
     public double calcularCosto(ProveedorTecnicos proveedor) {
         double total = calcularCostoItems();
         for (String especialidad : obtenerEspecialidadesPresenciales()) {
@@ -99,7 +99,7 @@ public class SolicitudServicio {
         return codigo + " - " + cliente.getNombre() + " - " + estado;
     }
 
-    // ---------------- BUILDER (clase interna) ----------------
+    // builder static
     public static class Builder {
         private String codigo;
         private Cliente cliente;
@@ -135,7 +135,7 @@ public class SolicitudServicio {
             return this;
         }
 
-        // Valida lo obligatorio antes de construir
+        // aqui se valida lo obligatorio antes de construir
         public SolicitudServicio build() {
             if (codigo == null || codigo.isEmpty()) {
                 throw new IllegalStateException("La solicitud necesita un codigo");
