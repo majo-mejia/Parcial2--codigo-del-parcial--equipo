@@ -11,6 +11,5 @@ public abstract class CaracteristicaFactory {
         return tipo;
     }
 
-    /** Envuelve el item con el extra y devuelve el item decorado. */
     public abstract ItemContratable crearCaracteristica(ItemContratable item);
 }

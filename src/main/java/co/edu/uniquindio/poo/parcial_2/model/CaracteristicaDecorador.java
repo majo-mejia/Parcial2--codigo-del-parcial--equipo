@@ -2,7 +2,7 @@ package co.edu.uniquindio.poo.parcial_2.model;
 
 import java.util.List;
 
-/** Envuelve un item y le suma un incremento sin modificar el original. */
+
 public abstract class CaracteristicaDecorador implements ItemContratable {
     protected ItemContratable envuelto;
     protected double incremento;
