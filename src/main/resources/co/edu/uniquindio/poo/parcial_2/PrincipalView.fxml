@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.edu.uniquindio.poo.parcial.controllers.PrincipalController">
+    <top>
+        <VBox spacing="4" style="-fx-background-color: #eef3f8;" BorderPane.alignment="CENTER">
+            <padding><Insets top="14" right="18" bottom="12" left="18"/></padding>
+            <Label text="TechSolutions" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+            <Label text="Administración de servicios tecnológicos" style="-fx-font-size: 13px;"/>
+        </VBox>
+    </top>
+    <center>
+        <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab text="Servicios">
+                    <content>
+                        <fx:include fx:id="serviciosView" source="ServiciosView.fxml"/>
+                    </content>
+                </Tab>
+                <Tab text="Paquetes">
+                    <content>
+                        <fx:include fx:id="paquetesView" source="PaquetesView.fxml"/>
+                    </content>
+                </Tab>
+                <Tab text="Solicitudes">
+                    <content>
+                        <fx:include fx:id="solicitudesView" source="SolicitudesView.fxml"/>
+                    </content>
+                </Tab>
+                <Tab text="Técnicos y costos">
+                    <content>
+                        <fx:include fx:id="tecnicosView" source="TecnicosView.fxml"/>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>
