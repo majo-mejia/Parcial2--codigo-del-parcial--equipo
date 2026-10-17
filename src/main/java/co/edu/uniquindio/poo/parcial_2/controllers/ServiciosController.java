@@ -1,7 +1,11 @@
 package co.edu.uniquindio.poo.parcial_2.controllers;
 
 import co.edu.uniquindio.poo.parcial_2.HelloApplication;
-import co.edu.uniquindio.poo.parcial_2.model.*;
+import co.edu.uniquindio.poo.parcial_2.model.componentes.Servicio;
+import co.edu.uniquindio.poo.parcial_2.model.componentes.TechSolutions;
+import co.edu.uniquindio.poo.parcial_2.model.enums.TipoCaracteristica;
+import co.edu.uniquindio.poo.parcial_2.model.enums.TipoServicio;
+import co.edu.uniquindio.poo.parcial_2.model.interfac.ItemContratable;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.util.StringConverter;

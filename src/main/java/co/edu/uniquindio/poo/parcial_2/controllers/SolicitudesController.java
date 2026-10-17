@@ -1,7 +1,9 @@
 package co.edu.uniquindio.poo.parcial_2.controllers;
 
 import co.edu.uniquindio.poo.parcial_2.HelloApplication;
-import co.edu.uniquindio.poo.parcial_2.model.*;
+import co.edu.uniquindio.poo.parcial_2.model.componentes.*;
+import co.edu.uniquindio.poo.parcial_2.model.enums.NivelPrioridad;
+import co.edu.uniquindio.poo.parcial_2.model.interfac.ItemContratable;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;

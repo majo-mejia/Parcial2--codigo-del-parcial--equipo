@@ -1,8 +1,8 @@
 package co.edu.uniquindio.poo.parcial_2;
 
-import co.edu.uniquindio.poo.parcial_2.model.LegacySupport;
-import co.edu.uniquindio.poo.parcial_2.model.LegacySupportAdapter;
-import co.edu.uniquindio.poo.parcial_2.model.TechSolutions;
+import co.edu.uniquindio.poo.parcial_2.model.componentes.LegacySupport;
+import co.edu.uniquindio.poo.parcial_2.model.adapter.LegacySupportAdapter;
+import co.edu.uniquindio.poo.parcial_2.model.componentes.TechSolutions;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

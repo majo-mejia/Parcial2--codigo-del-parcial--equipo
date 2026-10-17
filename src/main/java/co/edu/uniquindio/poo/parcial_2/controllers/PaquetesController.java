@@ -1,10 +1,10 @@
 package co.edu.uniquindio.poo.parcial_2.controllers;
 
 import co.edu.uniquindio.poo.parcial_2.HelloApplication;
-import co.edu.uniquindio.poo.parcial_2.model.ItemContratable;
-import co.edu.uniquindio.poo.parcial_2.model.Paquete;
-import co.edu.uniquindio.poo.parcial_2.model.Servicio;
-import co.edu.uniquindio.poo.parcial_2.model.TechSolutions;
+import co.edu.uniquindio.poo.parcial_2.model.interfac.ItemContratable;
+import co.edu.uniquindio.poo.parcial_2.model.componentes.Paquete;
+import co.edu.uniquindio.poo.parcial_2.model.componentes.Servicio;
+import co.edu.uniquindio.poo.parcial_2.model.componentes.TechSolutions;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
