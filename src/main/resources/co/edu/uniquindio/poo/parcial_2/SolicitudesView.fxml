@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="12" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.poo.parcial.controllers.SolicitudesController">
+    <padding><Insets top="16" right="18" bottom="16" left="18"/></padding>
+    <Label text="Registro de solicitudes de servicio" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <HBox spacing="8" alignment="CENTER_LEFT">
+        <Label text="Cliente:"/>
+        <ComboBox fx:id="cmbCliente" prefWidth="300"/>
+        <Label text="Prioridad:"/>
+        <ComboBox fx:id="cmbPrioridad" promptText="Opcional" prefWidth="140"/>
+        <Label text="Fecha programada:"/>
+        <DatePicker fx:id="dpFechaProgramada" prefWidth="150"/>
+    </HBox>
+    <HBox spacing="8" alignment="CENTER_LEFT">
+        <ComboBox fx:id="cmbElementoDisponible" promptText="Selecciona un servicio o paquete" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+        <Button text="Agregar a la solicitud" onAction="#agregarElemento"/>
+    </HBox>
+    <HBox spacing="16" VBox.vgrow="ALWAYS">
+        <VBox spacing="8" prefWidth="420" HBox.hgrow="ALWAYS">
+            <Label text="Elementos en el borrador" style="-fx-font-weight: bold;"/>
+            <ListView fx:id="lstItemsBorrador" VBox.vgrow="ALWAYS"/>
+            <HBox spacing="8">
+                <Button text="Quitar elemento seleccionado" onAction="#quitarElemento"/>
+                <Button text="Registrar solicitud" onAction="#registrarSolicitud"/>
+            </HBox>
+            <Label text="Observaciones técnicas (opcional):"/>
+            <TextArea fx:id="txtObservaciones" prefRowCount="3" wrapText="true"/>
+        </VBox>
+        <VBox spacing="8" HBox.hgrow="ALWAYS">
+            <Label text="Solicitudes registradas" style="-fx-font-weight: bold;"/>
+            <ListView fx:id="lstSolicitudes" prefHeight="180"/>
+            <Label text="Detalle de la solicitud seleccionada" style="-fx-font-weight: bold;"/>
+            <TextArea fx:id="txtDetalleSolicitud" wrapText="true" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </HBox>
+</VBox>
